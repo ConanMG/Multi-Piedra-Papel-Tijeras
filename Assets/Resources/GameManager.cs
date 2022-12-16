@@ -24,8 +24,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("En room1, somos " + PhotonNetwork.CurrentRoom.PlayerCount);
-        playerPrefab = "Prefabs/Player" + PhotonNetwork.CurrentRoom.PlayerCount;
-        //playerPrefab = "Prefabs/Player1";
+        playerPrefab = "Prefabs/Player";
         PhotonNetwork.Instantiate(playerPrefab, new Vector3(PhotonNetwork.CurrentRoom.PlayerCount - 2.0f, 0,0), Quaternion.identity);
     }
 }
